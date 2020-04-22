@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>uno.anahata</groupId>
     <artifactId>anahata-os-pom</artifactId>
-    <version>13.0.0-SNAPSHOT</version>
+    <version>14.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>anahata-os-pom</name>    
@@ -51,7 +51,7 @@
         <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
         <BUILD_NUMBER>LOCAL</BUILD_NUMBER>
-        <java.version>13</java.version>
+        <java.version>14</java.version>
     </properties>
 
     <repositories>
@@ -275,7 +275,7 @@
                                 </goals>
                                 <configuration>
                                     <failOnError>false</failOnError>
-                                    <footer>Messi is the greatest of all times</footer>
+                                    <footer>Nomatter what people say in the future, Messi will always be the best of all times</footer>
                                 </configuration>
                             </execution>
                         </executions>
