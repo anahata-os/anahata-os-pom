@@ -1,62 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>uno.anahata</groupId>
+    
+    <parent>
+        <groupId>uno.anahata</groupId>
+        <artifactId>anahata-pom</artifactId>
+        <version>8.0.0-SNAPSHOT</version>
+    </parent>
+    
+    
     <artifactId>anahata-os-pom</artifactId>
-    <version>14.0.0-SNAPSHOT</version>
+    
     <packaging>pom</packaging>
     
     <name>anahata-os-pom</name>    
-    <description>Parent pom for Anahata OS projects</description>
-    <url>https://bitbucket.org/anahata/anahata-os-pom</url>
     
-    <scm>
-        <connection>scm:git:git://bitbucket.org/anahata/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:ssh://bitbucket.org:anahata/${project.artifactId}.git</developerConnection>
-        <url>https://bitbucket.org/anahata/${project.artifactId}/src</url>
-    </scm>
-
+    <description>Parent pom for Anahata OS projects</description>
+    
     <licenses>
         <license>
             <name>MIT License</name>
             <url>https://opensource.org/licenses/MIT</url>
             <distribution>repo</distribution>
         </license>
-    </licenses>
+    </licenses>    
     
-    <organization>
-        <name>Anahata</name>
-        <url>http://www.anahata.uno/</url>
-    </organization>
-
-    <developers>
-        <developer>
-            <name>Priyadarshi</name>
-            <email>p@anahata.uno</email>
-            <organization>Anahata</organization>
-            <organizationUrl>http://www.anahata.uno</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        
-    </developers>
-    
-    <ciManagement>
-        <system>Jenkins</system>
-        <url>http://ci.anahata.uno/job/${project.artifactId}</url>
-    </ciManagement>
-
-    <properties>
-        <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
-        <build.timestamp>${maven.build.timestamp}</build.timestamp>
-        <BUILD_NUMBER>LOCAL</BUILD_NUMBER>
-        <java.version>14</java.version>
-    </properties>
-
     <repositories>
+        
+        <!-- TODO REMOVE -->
         <repository>
-            <id>anahata</id>
+            <id>anahata-os</id>
             <name>Anahata Public Enterprise Repository</name>
             <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
             <snapshots>
@@ -103,32 +76,7 @@
     </pluginRepositories>
 
     <build>
-        <plugins>
-            
-            <plugin>
-                <groupId>org.jboss.jandex</groupId>
-                <artifactId>jandex-maven-plugin</artifactId>
-                <version>1.0.7</version>
-                <executions>
-                    <execution>
-                        <id>make-index</id>
-                        <goals>
-                            <goal>jandex</goal>
-                        </goals>
-                        <configuration>
-                            <fileSets>
-                                <fileSet>
-                                    <directory>${project.build.directory}/classes</directory>
-                                    <excludes>
-                                        <exclude>**/*_mm*</exclude>
-                                    </excludes>
-                                </fileSet>
-                            </fileSets>
-                        </configuration>                        
-                    </execution>
-                </executions>
-            </plugin>
-            
+        <plugins>            
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>license-maven-plugin</artifactId>
@@ -140,47 +88,10 @@
                     <inceptionYear>2020</inceptionYear>
                     <projectName>${project.name}</projectName>
                 </configuration>
-            </plugin>  
-                      
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.10</version>
-                        </path>
-                    </annotationProcessorPaths>
-                    
-                </configuration>
             </plugin>
-            
         </plugins>
-
     </build>
     
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
-            <scope>provided</scope>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.0-alpha1</version>
-        </dependency>
-    </dependencies>
-
-
     <profiles>
         <profile>
             <id>publish</id>
