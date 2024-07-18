@@ -5,7 +5,7 @@
     <parent>
         <groupId>uno.anahata</groupId>
         <artifactId>anahata-pom</artifactId>
-        <version>8.0.0-SNAPSHOT</version>
+        <version>8.8.0-SNAPSHOT</version>
     </parent>
     
     
@@ -16,81 +16,6 @@
     <name>anahata-os-pom</name>    
     
     <description>Parent pom for Anahata OS projects</description>
-    
-    <licenses>
-        <license>
-            <name>MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>    
-    
-    <repositories>
-        
-        <!-- TODO REMOVE -->
-        <repository>
-            <id>anahata-os</id>
-            <name>Anahata Public Enterprise Repository</name>
-            <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        
-        <repository>
-            <id>ossrh</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>
-                https://oss.sonatype.org/content/repositories/snapshots
-            </url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        
-    </repositories>
-    
-    <distributionManagement>
-        <site>
-            <id>${project.artifactId}-site</id>
-            <url>http://anahata.uno/os/</url>
-        </site>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>anahata</id>
-            <name>Anahata Public Enterprise Repository</name>
-            <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <build>
-        <plugins>            
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-                <version>2.0.0</version>
-                <configuration>
-                    <licenseName>mit</licenseName>
-                    <organizationName><![CDATA[<A HREF="http://www.anahata.uno">Anahata</A>]]></organizationName>
-                    <lineLength>120</lineLength>
-                    <inceptionYear>2020</inceptionYear>
-                    <projectName>${project.name}</projectName>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     
     <profiles>
         <profile>
