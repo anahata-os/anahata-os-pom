@@ -16,6 +16,19 @@
     <name>anahata-os-pom</name>    
     
     <description>Parent pom for Anahata OS projects</description>
+
+    <repositories>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     
     <profiles>
         <profile>
@@ -115,10 +128,8 @@
                                     <detectJavaApiLink>true</detectJavaApiLink>
                                     <detectOfflineLinks>true</detectOfflineLinks>
                                     <show>private</show>
-                                    <addStylesheets>
-                                        <addStylesheet>anahata-barca-theme.css</addStylesheet>
-                                    </addStylesheets>
                                     <top><![CDATA[
+        <link rel="stylesheet" type="text/css" href="https://anahata-os.github.io/anahata-os-pom/anahata-barca-theme.css" />
         <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=f19c44f5-8b2e-458f-beab-96e4f9f8e603" />
         <div class="anahata-footer">
             <img src="https://www.anahata.uno/assets/logo-transparent.png" alt="Anahata Logo" class="anahata-logo">
