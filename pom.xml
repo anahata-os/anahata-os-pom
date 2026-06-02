@@ -111,7 +111,39 @@
                                 </goals>
                                 <configuration>
                                     <failOnError>false</failOnError>
-                                    <footer>Nomatter what people say in the future, Messi will always be the best of all times</footer>
+                                    <docfilessubdirs>true</docfilessubdirs>
+                                    <detectJavaApiLink>true</detectJavaApiLink>
+                                    <detectOfflineLinks>true</detectOfflineLinks>
+                                    <show>private</show>
+                                    <addStylesheets>
+                                        <addStylesheet>anahata-barca-theme.css</addStylesheet>
+                                    </addStylesheets>
+                                    <top><![CDATA[
+        <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=f19c44f5-8b2e-458f-beab-96e4f9f8e603" />
+        <div class="anahata-footer">
+            <img src="https://www.anahata.uno/assets/logo-transparent.png" alt="Anahata Logo" class="anahata-logo">
+            <a href="https://github.com/sponsors/anahata-os" target="_blank" class="donate-link">
+                Give everything to Anahata ❤️
+            </a>
+            <div class="barca-wrapper">
+                <span class="forca-text">Força <span class="barca-red">Barça!</span></span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Barça Crest">
+            </div>
+        </div>
+    ]]></top>
+                                    <bottom><![CDATA[
+        <div class="anahata-footer">
+            <img src="https://www.anahata.uno/assets/logo-transparent.png" alt="Anahata Logo" class="anahata-logo">
+            <a href="https://github.com/sponsors/anahata-os" target="_blank" class="donate-link">
+                Support the aliens ❤️
+            </a>
+            <div class="barca-wrapper">
+                <span class="forca-text">Força <span class="barca-red">Barça!</span></span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Barça Crest">
+            </div>
+        </div>
+        <p class="legal-copy"><small>Nomatter what people say in the future, Messi will always be the best of all times</small></p>
+    ]]></bottom>
                                 </configuration>
                             </execution>
                         </executions>
