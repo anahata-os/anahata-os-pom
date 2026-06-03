@@ -28,6 +28,17 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>anahata-public</id>
+            <name>Anahata Public Repository</name>
+            <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     
     <profiles>
